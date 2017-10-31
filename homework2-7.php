@@ -1,7 +1,5 @@
 <?php
 // Задание 7 -вывод времени
-//$hour = date('G');
-//$minute = date('i');
 function timeText($hour, $minute) {
   if ($hour == 1 || $hour == 21) {
     $hourText = 'час';

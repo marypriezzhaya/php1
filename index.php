@@ -1,7 +1,6 @@
 <?php
     $_title="minimalistica";
     $_h1="minimalistica";
-    //$_year=date('Y');
     ?>
 
 
