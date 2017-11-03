@@ -1,6 +1,11 @@
 <?php
     $_title="minimalistica";
     $_h1="minimalistica";
+    $menu = array(
+      'home' => array('products', 'something else'),
+      'archive' => array('old', 'very old', 'not that old'),
+      'contact us' => array('this way', 'that way', 'where we are')
+    );
     ?>
 
 
@@ -17,11 +22,16 @@
 
 	<div id="content">
 		<h1><?php echo $_h1; ?></h1>
-
-		<ul id="menu">
-			<li><a href="#">home</a></li>
-			<li><a href="#">archive</a></li>
-			<li><a href="#">contact</a></li>
+    <ul id="menu">
+      <?php
+        foreach ($menu as $firstLevel => $secondLevel) {
+          echo "<li><a href=\"#\">$firstLevel</a><ul>";
+            foreach ($secondLevel as $secLevName) {
+              echo "<li><a href=\"#\">$secLevName</a></li>";
+            }
+          echo "</ul></li>";
+        }
+      ?>
 		</ul>
 
 		<div class="post">
